@@ -350,6 +350,29 @@ button:hover {
     opacity: 1;
 }
 
+/* 社交图标大小优化 */
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+}
+
+.social-icons a svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* 深色模式下社交图标更柔和 */
+.dark .social-icons a {
+    opacity: 0.8;
+}
+
+.dark .social-icons a:hover {
+    opacity: 1;
+}
+
 /* ==========================================
    动画效果
    ========================================== */
