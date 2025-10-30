@@ -1,0 +1,90 @@
+# Cloudflare Pages 缓存头配置
+# 文档：https://developers.cloudflare.com/pages/platform/headers
+
+# 默认缓存策略
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# 静态资源长期缓存
+/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# CSS 和 JS 文件缓存
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: text/css; charset=utf-8
+
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: application/javascript; charset=utf-8
+
+# 字体文件缓存
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: font/woff2
+
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: font/woff
+
+/*.ttf
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: font/ttf
+
+# 图片文件缓存
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: image/jpeg
+
+/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: image/jpeg
+
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: image/png
+
+/*.gif
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: image/gif
+
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: image/svg+xml
+
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: image/webp
+
+/*.ico
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: image/x-icon
+
+# HTML 页面短期缓存
+/*.html
+  Cache-Control: public, max-age=600, must-revalidate
+
+# JSON 文件（搜索索引等）
+/*.json
+  Cache-Control: public, max-age=3600, must-revalidate
+  Content-Type: application/json; charset=utf-8
+
+# XML 文件（RSS、Sitemap）
+/*.xml
+  Cache-Control: public, max-age=3600, must-revalidate
+  Content-Type: application/xml; charset=utf-8
+
+# RSS 订阅
+/index.xml
+  Cache-Control: public, max-age=1800, must-revalidate
+  Content-Type: application/rss+xml; charset=utf-8
+
+# 安全头 - API 端点（如果有）
+/api/*
+  X-Robots-Tag: noindex
+  Cache-Control: no-store, no-cache, must-revalidate

@@ -1,0 +1,14 @@
+# Cloudflare Pages 重定向配置
+# 文档：https://developers.cloudflare.com/pages/platform/redirects
+
+# 404 页面
+/404.html /404 200
+
+# 示例：旧 URL 重定向到新 URL（如果以后需要）
+# /old-post /posts/new-post 301
+
+# 示例：短链接重定向
+# /github https://github.com/yourusername 301
+
+# SPA 路由支持（如果使用 JavaScript 框架）
+# /* /index.html 200

@@ -1,0 +1,42 @@
+{{- if .Params.comments | default true }}
+<div id="giscus-container" style="margin-top: 2rem;">
+  <script src="https://giscus.app/client.js"
+    data-repo="yourusername/my-awesome-blog"
+    data-repo-id="YOUR_REPO_ID"
+    data-category="Announcements"
+    data-category-id="YOUR_CATEGORY_ID"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+</div>
+
+<!--
+使用步骤：
+1. 在你的 GitHub 仓库启用 Discussions
+   - 进入仓库 Settings → Features → 勾选 Discussions
+
+2. 安装 Giscus 应用
+   - 访问 https://github.com/apps/giscus
+   - 点击 Install，选择你的仓库
+
+3. 获取配置信息
+   - 访问 https://giscus.app/zh-CN
+   - 输入仓库名：yourusername/my-awesome-blog
+   - 选择 Discussions 分类（建议选 Announcements）
+   - 复制生成的代码中的 data-repo-id 和 data-category-id
+   - 替换上面的 YOUR_REPO_ID 和 YOUR_CATEGORY_ID
+
+4. 更新仓库名
+   - 将 data-repo="yourusername/my-awesome-blog" 改为你的实际仓库
+
+配置完成后，评论将自动显示在文章底部。
+-->
+{{- end }}

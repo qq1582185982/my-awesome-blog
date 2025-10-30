@@ -1,0 +1,384 @@
+/* ==========================================
+   自定义样式 - 覆盖和扩展 PaperMod 主题
+   ========================================== */
+
+/* 自定义颜色变量 */
+:root {
+    --primary: #0066cc;
+    --primary-hover: #0052a3;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --border-radius: 8px;
+    --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* ==========================================
+   代码块优化
+   ========================================== */
+
+/* 代码块容器 */
+.highlight {
+    margin: 1.5rem 0;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.highlight pre {
+    margin: 0;
+    padding: 1.5rem;
+    overflow-x: auto;
+    border-radius: var(--border-radius);
+}
+
+/* 行内代码 */
+code {
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* 代码行号 */
+.highlight .ln {
+    margin-right: 1rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* ==========================================
+   文章卡片优化
+   ========================================== */
+
+.post-entry {
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.post-entry:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* 文章标题 */
+.post-title {
+    transition: color 0.2s ease;
+}
+
+.post-entry:hover .post-title {
+    color: var(--primary);
+}
+
+/* ==========================================
+   图片优化
+   ========================================== */
+
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin: 1.5rem 0;
+    display: block;
+}
+
+/* 图片居中 */
+.post-content p > img:only-child {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==========================================
+   表格优化
+   ========================================== */
+
+.post-content table {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.post-content th {
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+.post-content td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.post-content tr:last-child td {
+    border-bottom: none;
+}
+
+.post-content tbody tr:hover {
+    background: var(--hljs-bg);
+}
+
+/* ==========================================
+   引用块优化
+   ========================================== */
+
+.post-content blockquote {
+    border-left: 4px solid var(--primary);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    background: var(--code-bg);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.post-content blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================
+   链接优化
+   ========================================== */
+
+.post-content a {
+    color: var(--primary);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.post-content a:hover {
+    color: var(--primary-hover);
+    border-bottom-color: var(--primary-hover);
+}
+
+/* ==========================================
+   目录优化 (TOC)
+   ========================================== */
+
+#TableOfContents {
+    background: var(--code-bg);
+    border-radius: var(--border-radius);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+}
+
+#TableOfContents ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+#TableOfContents li {
+    margin: 0.5rem 0;
+}
+
+#TableOfContents a {
+    border-bottom: none;
+}
+
+/* ==========================================
+   按钮优化
+   ========================================== */
+
+.button,
+button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.button:hover,
+button:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   标签优化
+   ========================================== */
+
+.post-tags a {
+    background: var(--code-bg);
+    color: var(--content);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.post-tags a:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* ==========================================
+   分页按钮优化
+   ========================================== */
+
+.page-item a {
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.page-item a:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* ==========================================
+   搜索框优化
+   ========================================== */
+
+#searchInput {
+    border-radius: var(--border-radius);
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--border);
+    transition: var(--transition);
+}
+
+#searchInput:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+/* ==========================================
+   响应式优化
+   ========================================== */
+
+@media (max-width: 768px) {
+    .highlight pre {
+        padding: 1rem;
+        font-size: 0.85rem;
+    }
+
+    .post-content table {
+        font-size: 0.9rem;
+    }
+
+    .post-content th,
+    .post-content td {
+        padding: 0.5rem;
+    }
+}
+
+/* ==========================================
+   滚动条优化（仅 Webkit 浏览器）
+   ========================================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--theme);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--tertiary);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+/* ==========================================
+   打印样式
+   ========================================== */
+
+@media print {
+    .top-link,
+    .nav,
+    .footer,
+    #giscus-container {
+        display: none !important;
+    }
+
+    .post-content a {
+        text-decoration: underline;
+    }
+
+    .post-content a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+    }
+}
+
+/* ==========================================
+   深色模式额外优化
+   ========================================== */
+
+.dark {
+    --primary: #4da6ff;
+    --primary-hover: #66b3ff;
+}
+
+.dark .post-content table th {
+    background: var(--primary);
+}
+
+.dark .highlight {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================
+   动画效果
+   ========================================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.post-entry {
+    animation: fadeIn 0.5s ease;
+}
+
+/* ==========================================
+   自定义工具提示
+   ========================================== */
+
+[title] {
+    position: relative;
+    cursor: help;
+}
+
+/* ==========================================
+   代码复制按钮优化
+   ========================================== */
+
+.highlight-wrapper {
+    position: relative;
+}
+
+.copy-code-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.copy-code-button:hover {
+    opacity: 1;
+}
