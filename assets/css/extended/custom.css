@@ -352,24 +352,53 @@ button:hover {
 
 /* 社交图标大小优化 */
 .social-icons a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 28px !important;
+    height: 28px !important;
+    padding: 0 !important;
+    margin: 0 4px !important;
 }
 
 .social-icons a svg {
-    width: 20px;
-    height: 20px;
+    width: 18px !important;
+    height: 18px !important;
+    margin: auto !important;
+    vertical-align: middle !important;
 }
 
-/* 深色模式下社交图标更柔和 */
+/* 主题切换按钮大小优化 */
+#theme-toggle {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 32px !important;
+    height: 32px !important;
+    padding: 0 !important;
+}
+
+#theme-toggle svg {
+    width: 20px !important;
+    height: 20px !important;
+    margin: auto !important;
+    vertical-align: middle !important;
+}
+
+/* 深色模式下图标更柔和 */
 .dark .social-icons a {
     opacity: 0.8;
 }
 
 .dark .social-icons a:hover {
+    opacity: 1;
+}
+
+.dark #theme-toggle {
+    opacity: 0.85;
+}
+
+.dark #theme-toggle:hover {
     opacity: 1;
 }
 
