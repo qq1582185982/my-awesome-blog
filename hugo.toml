@@ -48,15 +48,15 @@ enableEmoji = true
   # 社交图标
   [[params.socialIcons]]
     name = "github"
-    url = "https://github.com/yourusername"
+    url = "https://github.com/qq1582185982"
 
   [[params.socialIcons]]
     name = "email"
-    url = "mailto:your@email.com"
+    url = "mailto:2361472081@qq.com"
 
   [[params.socialIcons]]
-    name = "rss"
-    url = "/index.xml"
+    name = "qq"
+    url = "http://wpa.qq.com/msgrd?v=3&uin=2361472081&site=qq&menu=yes"
 
 # 菜单配置
 [menu]
