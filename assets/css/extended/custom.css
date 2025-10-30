@@ -210,15 +210,20 @@ button:hover {
 .post-tags a {
     background: var(--code-bg);
     color: var(--content);
-    padding: 0.25rem 0.75rem;
-    border-radius: 1rem;
-    font-size: 0.9rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.3rem;
+    font-size: 0.85rem;
     transition: var(--transition);
+    opacity: 0.85;
+    border: 1px solid var(--border);
 }
 
 .post-tags a:hover {
     background: var(--primary);
     color: white;
+    opacity: 1;
+    border-color: var(--primary);
+    transform: translateY(-1px);
 }
 
 /* ==========================================
@@ -331,6 +336,18 @@ button:hover {
 
 .dark .highlight {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 深色模式下标签更柔和 */
+.dark .post-tags a {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    opacity: 0.8;
+}
+
+.dark .post-tags a:hover {
+    background: var(--primary);
+    opacity: 1;
 }
 
 /* ==========================================
