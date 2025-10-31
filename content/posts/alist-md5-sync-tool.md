@@ -87,13 +87,6 @@ ShowToc: true
 3. 🔄 **自动化部署**: 配合脚本实现自动同步
 4. 💾 **资源管理**: 管理和下载 Alist 存储的文件
 
-## 下载地址
-
-**百度网盘分享**
-
-- 链接：https://pan.baidu.com/s/1Zd6VotpTSczB_hHKo0yhuA?pwd=naic
-- 提取码：`naic`
-
 ## 使用截图
 
 ### 直链下载器界面
@@ -146,20 +139,12 @@ A: 目前支持 Windows 系统，其他平台请使用 Python 源码运行。
 **Q: 如何获取 Alist Token？**
 A: 登录 Alist 后台，在设置中可以生成访问令牌。
 
-## 更新计划
-
-- [ ] 支持 Linux 和 macOS 平台
-- [ ] 添加更多哈希算法（SHA256等）
-- [ ] 实现文件加密传输
-- [ ] 添加详细日志记录
-- [ ] 支持任务计划定时同步
-
 ## 总结
 
 这个工具极大简化了基于 Alist 的文件管理流程，通过 MD5 哈希对比实现智能增量同步，配合内置的 aria2 下载引擎，提供高效、可靠的文件下载和同步解决方案。
 
+如有问题欢迎在评论区留言交流！
+
 ---
 
-**原文链接**: https://alup.sviplk.com/archives/460784a6-8d56-46ac-8c18-a8356eef17ac
-
-如有问题欢迎在评论区留言交流！
+**下载地址**: https://pan.baidu.com/s/1Zd6VotpTSczB_hHKo0yhuA?pwd=naic
