@@ -14,42 +14,40 @@ ShowToc: true
 
 最简单的方式：
 
-![示例图片](/images/example.jpg)
+![示例图片](https://picsum.photos/800/600)
 
 ### 方法 2：带标题的图片
 
-![示例图片](/images/example.jpg "这是鼠标悬停时显示的标题")
+![示例图片](https://picsum.photos/800/600?random=1 "这是鼠标悬停时显示的标题")
 
 ### 方法 3：Hugo Figure Shortcode
 
 使用 Hugo 的 figure shortcode 可以添加更多功能：
 
-{{< figure src="/images/example.jpg" alt="图片描述" caption="这是图片说明文字" width="600" >}}
+{{< figure src="https://picsum.photos/600/400?random=2" alt="图片描述" caption="这是图片说明文字" width="600" >}}
 
 ## 图片大小控制
 
 ### 使用 HTML（更灵活）
 
-<img src="/images/example.jpg" alt="示例" width="400" />
+<img src="https://picsum.photos/800/600?random=3" alt="示例" width="400" />
 
-### 使用 CSS 类
+### 使用内联样式
 
-如果配置了自定义 CSS 类，可以这样用：
-
-<img src="/images/example.jpg" class="img-center" />
+<img src="https://picsum.photos/800/600?random=4" alt="示例" style="width: 500px; height: auto;" />
 
 ## 多图并排显示
 
-<div style="display: flex; gap: 10px;">
-  <img src="/images/photo1.jpg" alt="图片1" width="300" />
-  <img src="/images/photo2.jpg" alt="图片2" width="300" />
+<div style="display: flex; gap: 10px; flex-wrap: wrap;">
+  <img src="https://picsum.photos/300/200?random=5" alt="图片1" width="300" />
+  <img src="https://picsum.photos/300/200?random=6" alt="图片2" width="300" />
 </div>
 
 ## 外部图片链接
 
 也可以直接引用外部图片：
 
-![外部图片](https://via.placeholder.com/600x400)
+![外部图片](https://picsum.photos/600/400?random=7)
 
 ## 图片优化建议
 

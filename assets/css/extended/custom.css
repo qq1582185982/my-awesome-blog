@@ -82,12 +82,23 @@ code {
     height: auto;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
-    margin: 1.5rem 0;
+    margin: 1.5rem auto;
     display: block;
 }
 
-/* 图片居中 */
+/* Markdown 图片居中 */
 .post-content p > img:only-child {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 使用 text-align: center 的容器 */
+.post-content div[style*="text-align: center"] {
+    text-align: center;
+}
+
+.post-content div[style*="text-align: center"] img {
+    display: inline-block;
     margin-left: auto;
     margin-right: auto;
 }
@@ -159,27 +170,92 @@ code {
 }
 
 /* ==========================================
-   目录优化 (TOC)
+   目录优化 (TOC) - 固定在右侧
    ========================================== */
 
-#TableOfContents {
+/* 目录容器固定在右侧 */
+.toc {
+    position: fixed;
+    right: 2rem;
+    top: 100px;
+    width: 280px;
+    max-height: calc(100vh - 150px);
+    overflow-y: auto;
     background: var(--code-bg);
     border-radius: var(--border-radius);
     padding: 1rem 1.5rem;
-    margin: 1.5rem 0;
+    box-shadow: var(--box-shadow);
+    z-index: 10;
+}
+
+/* 折叠面板样式 */
+.toc details {
+    background: transparent;
+}
+
+.toc summary {
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    user-select: none;
+}
+
+.toc .inner {
+    margin-top: 0.5rem;
+}
+
+#TableOfContents {
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
 }
 
 #TableOfContents ul {
     margin: 0;
-    padding-left: 1.5rem;
+    padding-left: 1.2rem;
+    list-style: none;
 }
 
 #TableOfContents li {
     margin: 0.5rem 0;
+    line-height: 1.6;
 }
 
 #TableOfContents a {
     border-bottom: none;
+    font-size: 0.9rem;
+    color: var(--content);
+    transition: color 0.2s ease;
+}
+
+#TableOfContents a:hover {
+    color: var(--primary);
+}
+
+/* 当前激活的目录项 */
+#TableOfContents a.active {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* 移动端和小屏幕：目录显示在顶部 */
+@media (max-width: 1280px) {
+    .toc {
+        position: static;
+        width: 100%;
+        max-height: none;
+        margin: 1.5rem 0;
+        right: auto;
+        top: auto;
+    }
+}
+
+/* 平板和小屏幕 */
+@media (max-width: 768px) {
+    .toc {
+        padding: 1rem;
+    }
 }
 
 /* ==========================================
@@ -348,6 +424,98 @@ button:hover {
 .dark .post-tags a:hover {
     background: var(--primary);
     opacity: 1;
+}
+
+/* ==========================================
+   返回顶部按钮优化
+   ========================================== */
+
+/* 限制 SVG 图标尺寸，同时保持颜色 */
+.top-link svg {
+    width: 18px;
+    height: 9px;
+    fill: white;
+    display: block;
+}
+
+/* 深色模式下图标保持白色 */
+.dark .top-link svg {
+    fill: white;
+}
+
+/* 按钮在屏幕右侧 - 响应式定位 */
+.top-link {
+    position: fixed !important;
+    top: 85vh !important;
+    margin-top: -21px !important;
+    bottom: auto !important;
+    right: calc(50vw - 600px) !important;
+    background: var(--primary) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.3s ease !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* 显示状态下的透明度 */
+.top-link[style*="visibility: visible"] {
+    opacity: 0.7 !important;
+}
+
+/* 悬停效果 */
+.top-link:hover {
+    opacity: 1 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* 深色模式下的样式 */
+.dark .top-link {
+    background: var(--primary) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+.dark .top-link:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* 超大屏幕 */
+@media (min-width: 1920px) {
+    .top-link {
+        right: calc(50vw - 700px) !important;
+    }
+}
+
+/* 大屏幕 */
+@media (max-width: 1919px) and (min-width: 1440px) {
+    .top-link {
+        right: calc(50vw - 550px) !important;
+    }
+}
+
+/* 中等屏幕 */
+@media (max-width: 1439px) and (min-width: 1024px) {
+    .top-link {
+        right: calc(50vw - 400px) !important;
+    }
+}
+
+/* 小屏幕（平板） */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .top-link {
+        right: 40px !important;
+        top: 80vh !important;
+    }
+}
+
+/* 移动设备 */
+@media (max-width: 767px) {
+    .top-link {
+        right: 20px !important;
+        top: 85vh !important;
+    }
 }
 
 /* 社交图标大小优化 */

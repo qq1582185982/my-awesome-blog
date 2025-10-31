@@ -1,5 +1,6 @@
 baseURL = "https://blog.sviplk.cn/"
-languageCode = "zh-cn"
+languageCode = "zh"
+defaultContentLanguage = "zh"
 title = "我的技术博客"
 theme = "PaperMod"
 enableRobotsTXT = true
