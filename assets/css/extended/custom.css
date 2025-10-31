@@ -103,6 +103,26 @@ code {
     margin-right: auto;
 }
 
+/* 图片网格容器 - 双排显示 */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.image-grid img {
+    width: 100%;
+    margin: 0;
+}
+
+/* 移动端单排显示 */
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* ==========================================
    表格优化
    ========================================== */
