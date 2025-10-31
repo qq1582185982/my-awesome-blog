@@ -51,6 +51,13 @@ ShowToc: true
 - 🔫 **漫游远程格挡改为可强制**：增加漫游职业的操作性
 - ⚔️ **剑魂改为 ACT5**：剑魂职业采用 ACT5 风格
 
+## 游戏演示
+
+<video width="100%" controls>
+  <source src="/videos/dof-act60-gameplay.mp4" type="video/mp4">
+  您的浏览器不支持视频播放。
+</video>
+
 ## 版本截图
 
 <div class="image-grid">
@@ -73,13 +80,6 @@ ShowToc: true
 - 追求操作和挑战性的玩家
 - 喜欢60级版本的怀旧玩家
 - 想要体验不同战斗机制的玩家
-
-## 使用说明
-
-1. 下载服务器端文件
-2. 解压到本地目录
-3. 查看说明文档配置服务器
-4. 启动服务器开始游戏
 
 ## 注意事项
 

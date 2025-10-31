@@ -46,6 +46,13 @@ ShowToc: true
 - ✅ 不改变副本难度和机制
 - ✅ 只优化单机体验和经济系统
 
+## 游戏演示
+
+<video width="100%" controls>
+  <source src="/videos/dof-s2a1-gameplay.mp4" type="video/mp4">
+  您的浏览器不支持视频播放。
+</video>
+
 ## 版本截图
 
 <div class="image-grid">
@@ -62,13 +69,6 @@ ShowToc: true
 - 追求完整单机经济体验的玩家
 - 想要研究游戏机制的学习者
 - 不喜欢频繁刷副本的休闲玩家
-
-## 使用说明
-
-1. 下载服务器端文件
-2. 解压到本地目录
-3. 查看说明文档配置服务器
-4. 启动服务器开始游戏
 
 ## 注意事项
 
