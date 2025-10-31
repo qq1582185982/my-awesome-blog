@@ -1,7 +1,7 @@
 ---
 title: "图片使用示例"
 date: 2025-10-30T17:00:00+08:00
-draft: true
+draft: false
 description: "演示如何在博客文章中添加图片"
 tags: ["教程", "Hugo"]
 categories: ["技术"]
